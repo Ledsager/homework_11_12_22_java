@@ -27,8 +27,8 @@ public class Main {
         listTovar.add(tov4);
 
         Double maxPrice = 0.0;
-        for (Tovar tovar : listTovar) {
-            Tovar t = (Tovar) tovar;
+        for (Tovar t : listTovar) {
+//            Tovar t = (Tovar) tovar;
             if ((t.getName().contains("высший")) && ((t.getBrand().equals("первый")) || (t.getBrand().equals("второй")))) {
                 if (t.getPrice() > maxPrice) {
                     maxPrice = t.getPrice();
@@ -60,16 +60,16 @@ public class Main {
         Set<String> setName = new HashSet();
 
         Double minPrice = Double.MAX_VALUE;
-        for (TovarN tovar : listTovar) {
-            TovarN t = (TovarN) tovar;
+        for (TovarN t : listTovar) {
+//            TovarN t = (TovarN) tovar;
             if (t.getBrand().equals("первый")) {
                 if (t.getPrice() < minPrice) {
                     minPrice = t.getPrice();
                 }
             }
         }
-        for (TovarN tovar : listTovar) {
-            TovarN t = (TovarN) tovar;
+        for (TovarN t : listTovar) {
+//            TovarN t = (TovarN) tovar;
             if ((t.getBrand().equals("первый")) && (t.getPrice().equals(minPrice))) {
                 setName.add(t.getName());
             }
@@ -99,10 +99,10 @@ public class Main {
         Set<String> setName = new HashSet();
 
 
-        for (Book tovar : listTovar) {
-            Book t = (Book) tovar;
+        for (Book t : listTovar) {
+//            Book t = (Book) tovar;
             if ((t.getSurname().contains("A"))&&(t.getYear()>2010)&&(isPrime(t.getPage())==true)) {
-                System.out.println(t);
+//                System.out.println(t);
                 setName.add(t.getName());
             }
         }
